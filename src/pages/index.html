@@ -1,0 +1,277 @@
+---
+layout: index-layout
+subject: My Email Templates
+name: Jack
+time: 10:42 AM - 10:52 AM
+total: $18.28
+---
+
+<container class="header">
+  <spacer size="62" class="show-for-large"></spacer>
+  <spacer size="42" class="hide-for-large"></spacer>
+  <row>
+    <columns class="sideSpace" width="60px" small="1" id="space"></columns>
+    <columns class="headerMain" small="10">
+      <!-- Header message -->
+      <row>
+        <columns>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/logo.png" alt="DoorDash logo."></a>
+          <spacer size="50"></spacer>
+          <h1>Thanks for your<br>order, {{name}}</h1>
+          <spacer size="20"></spacer>
+          <p>The estimated delivery time for your order is <b>{{time}}</b>. Track your order in the DoorDash app or website.</p>
+          <spacer size="35"></spacer>
+          <a href="#" class="button">Track Your Order</a>
+        </columns>
+      </row>
+
+    </columns>
+    <columns class="sideSpace" small="1"></columns>
+  </row>
+
+  <spacer></spacer>
+
+  <!-- Header image -->
+  <row>
+    <columns>
+      <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/headerImage.png" alt="Many delivery items."></a>
+    </columns>
+  </row>
+</container>
+
+<container class="mainContent">
+  
+
+  <row class="midContentContainer">
+    <columns class="sideSpace" width="42px" small="1"></columns>
+    <columns class="listContainter" small="10">
+      <!-- Body Content -->
+      <row>
+        <columns class="sideSpace" width="40px" small="1"></columns>
+        <columns class="innermostContainer" small="10">
+          <spacer size="50"></spacer>
+          <p>Paid with {{order.paymentType}}</p>
+          <p>{{order.resturant}}</p>
+          <p class="totalTop"><b>Total: ${{order.total}}</b></p>
+          <spacer size="35"></spacer>
+          <h2>Your receipt</h2>
+          <p class="adressTop">{{order.address}}</p>
+          <spacer size="45"></spacer>
+          <p class="nameTop">- For: {{order.fullName}} -</p>
+          <spacer size="20"></spacer>
+          <!-- for each item ordered -->
+          {{#each order.ordered}}
+          <row class="foodOrdered">
+            <columns class="quantity" small="2">
+              <p>{{this.quantity}}x</p>
+            </columns>
+            <columns class="items" small="8">
+              <p><b>{{this.item}}</b> {{this.itemType}}</p>
+              <ul>
+               
+                {{#each this.extras}}
+                <li><p>&#9679; {{this.extra}}</p></li>
+                {{/each}}
+              </ul>
+            </columns>
+            <columns class="price" small="2">
+              <p>${{this.price}}</p>
+            </columns>
+          </row>
+          <spacer size="20"></spacer>
+          {{/each}}
+
+          <spacer size="25"></spacer>
+
+          <row>
+            <columns class="lineSpace show-for-large" small="1"></columns>
+            <columns class="line" width="535px" small="10"></columns>
+            <columns class="lineSpace show-for-large" small="1"></columns>
+          </row>
+          <spacer size="10"></spacer>
+
+          <!-- Calculations for total -->
+          <row class="calculations">
+            <columns small="6">
+              <p>Subtotal</p>
+              <p>Taxes</p>
+              <p>Delivery Fee</p>
+              <p>Service Fee</p>
+              <p>Tip</p>
+            </columns>
+            <columns class="calculationNumbers" small="6">
+              <p>${{order.subtotal}}</p>
+              <p>${{order.taxes}}</p>
+              <p>${{order.deliveryFee}}</p>
+              <p>${{order.serviceFee}}</p>
+              <p>${{order.tip}}</p>
+            </columns>
+          </row>
+
+          <spacer size="10"></spacer>
+
+          <row>
+            <columns class="lineSpace show-for-large"></columns>
+            <columns class="line"></columns>
+            <columns class="lineSpace show-for-large"></columns>
+          </row>
+
+          <spacer size="10"></spacer>
+
+          <row class="finalTotal">
+            <columns small="6">
+            <p><b>Total Charged</b></p>
+            </columns>
+            <columns class="totalPrice" small="6">
+              <p id="total"><b>${{#mathOperator}}{{order.tip}},{{order.taxes}},{{order.subtotal}},{{order.deliveryFee}},{{order.serviceFee}}{{/mathOperator}}</b></p>
+            </columns>
+          </row>
+
+          <spacer size="20"></spacer>
+
+          <row>
+            <columns small="12">
+              <a class="orderHelp" href="#"><b>Get Order Help</b></a>
+            </columns>
+          </row>
+
+          <spacer size="50"></spacer>
+
+        </columns>
+        <columns class="sideSpace" width="40px" small="1"></columns>
+      </row>
+
+    </columns>
+    <columns class="sideSpace" width="42px" small="1"></columns>
+  </row>
+
+  
+</container>
+
+<!-- footer section -->
+<container>
+  
+  <row class="footerNonFood">
+    <!-- Text side -->
+    <columns large="7">
+      <row>
+        <columns class="nonFoodSpace" width="40px" large="1" small="2"></columns>
+        <columns class="nonFoodTextArea" width="330px" large="11" small="10">
+          <spacer size="30"></spacer>
+          <a href="#">
+            <h2>Get more from your<br>neighborhood.</h2>
+            <spacer size="10"></spacer>
+            <p id="nonFoodP">Snacks, drinks, medicine, and more - from your corner store or drugstore to your door, delivered in under 30 minutes.</p>
+            <spacer size="25"></spacer>
+            <a href="#" class="button">Shop Now</a>
+          </a>
+          <spacer size="20"></spacer>
+        </columns>
+      </row>
+    </columns>
+
+    <!-- Image Side -->
+    <columns large="5">
+      <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/nonFood.png" alt="Image of non-food delivery items."></a>
+    </columns>
+  </row>
+
+  <!-- footer links -->
+  <row class="footerLinks">
+    <columns class="footerLinksSpace" small="1"></columns>
+    <columns class="innermostFooterLinks" small="10">
+      <row>
+        <columns class="here">
+          <spacer size="45"></spacer>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/footerLogo.png" alt="DoorDash Logo." class="wideLogo"></a>
+          <spacer size="25"></spacer>
+        </columns>
+      </row>
+      <row>
+        <columns class="line"></columns>
+      </row>
+
+      <row>
+        <!-- App -->
+        <columns class="appRow" small="6" large="3">
+          <spacer size="35"></spacer>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/apple.png" alt="apple Logo." class="apple"></a>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/android.png" alt="android Logo." class="android"></a>
+          <spacer size="9"></spacer>
+          <row>
+            <columns class="tilesText">
+              <a href="#"><p>Download<br>the App</p></a>
+            </columns>
+          </row>
+        </columns>
+
+        <!-- DashPass -->
+        <columns class="tiles" small="6" large="3">
+          <spacer size="35"></spacer>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/dashPassIcon.jpg" alt="Dash pass logo." class="pass"></a>
+          <spacer size="9"></spacer>
+          <row>
+            <columns class="tilesText">
+              <a href="#"><p>Sign up for DashPass</p></a>
+            </columns>
+          </row>
+        </columns>
+
+        <!-- Refer a Freind -->
+        <columns class="tiles" small="6" large="3">
+          <spacer size="35"></spacer>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/referIcon.png" alt="Referal icon." class="refer"></a>
+          <spacer size="9"></spacer>
+          <row>
+            <columns class="tilesText">
+              <a href="#"><p>Refer and<br>earn credit</p></a>
+            </columns>
+          </row>
+        </columns>
+
+        <!-- Jobs -->
+        <columns class="tiles" small="6" large="3">
+          <spacer size="35"></spacer>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/deliverIcon.png" alt="Driver icon." class="job"></a>
+          <spacer size="9"></spacer>
+          <row>
+            <columns class="tilesText">
+              <a href="#"><p>Deliver with DoorDash</p></a>
+            </columns>
+          </row>
+        </columns>
+      </row>
+      <spacer size="45"></spacer>
+    </columns>
+    <columns class="footerLinksSpace" small="1"></columns>
+  </row>
+  
+
+  <row class="footerPolicy">
+    <columns class="footerPolicySpace"></columns>
+    <columns class="footerPolicyMain">
+      <spacer size="40"></spacer>
+      <a href="#"><p class="address">©2021 DoorDash, Inc.<br>303 2nd St.<br>South Tower, Suite 800<br>San Francisco CA 94107</p#></a>
+      <spacer size="18"></spacer>
+      <row>
+        <columns class="footerPolicyIcons">
+          <a href="https://www.facebook.com/"><img src="https://jackisbuilding.com/images/transactionalEmail/facebook.png" alt="facebook icon." class="footerIconFacebook"></a>
+          <a href="https://twitter.com/?lang=en"><img src="https://jackisbuilding.com/images/transactionalEmail/twitter.png" alt="twitter icon." class="footerIconTwitter"></a>
+          <a href="https://www.instagram.com/"><img src="https://jackisbuilding.com/images/transactionalEmail/instagram.png" alt="instagram icon." class="footerIconsInstagram"></a>
+          <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/mLogo.png" alt="M icon." class="footerIconsM"></a>
+        </columns>
+      </row>
+      <spacer size="18"></spacer>
+      <p><a href="#">Help Center </a> &nbsp;|&nbsp; <a href="#"> View email in browser</a></p>
+      <spacer size="45"></spacer>
+      <p>Prop 65 Restaurant <a href="#" class="warning">WARNING</a></p>
+      <spacer size="18"></spacer>
+      <p>Prop 65 Alcohol <a href="#" class="warning">WARNING</a></p>
+      <p id="long">Drinking distilled spirits, beer, coolers, wine, and other alcoholic beverages may increase cancer risk, and, during pregnancy, can cause birth defects.  For more information go to www.P65Warnings.ca.gov/alcohol.</p>
+      <spacer size="18"></spacer>
+      <p>Prop 65 BPA <a href="#" class="warning">WARNING</a></p>
+      <spacer size="30"></spacer>
+    </columns>
+    <columns class="footerPolicySpace"></columns>
+  </row>
+</container>

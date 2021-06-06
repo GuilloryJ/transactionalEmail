@@ -1,0 +1,513 @@
+/* Mobile */
+@media only screen and (max-width: 600px)
+{
+ .header.container
+ {
+   h1
+   {
+     font-size:40px !important;
+   }
+  .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr, #space td
+  {
+    max-width:20px !important;
+    width:20px !important;
+  }
+ }
+ .container.mainContent
+ {
+  .midContentContainer
+  {
+    table-layout: fixed;
+    .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+    {
+      max-width:5% !important;
+      width:5% !important;
+    }
+
+    .listContainter
+    {
+      table-layout: fixed !important;
+      width:90% !important;
+      color:black !important;
+      p
+      {
+        color:black !important;
+      }
+      .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+      {
+        max-width:5% !important;
+        width:5% !important;
+      }
+      .innermostContainer
+      {
+        width:90% !important;
+        table-layout: fixed !important;
+        p, p.adressTop
+        {
+          color:black !important;
+        }
+        .price
+        {
+          width:20%!important;
+          color:black !important;
+          p
+          {
+            width:100% !important;
+            color:black !important;
+            font-size:17px !important;
+            text-align:right !important;
+          }
+        }
+        .quantity
+        {
+          width:10% !important;
+          color:black !important;
+          p
+          {
+            font-size:17px !important;
+          }
+        }
+        .items
+        {
+          width:70% !important;
+          p
+          {
+            width:100% !important;
+            color:black !important;
+            font-size:17px !important;
+          }
+        }
+      }
+      th.lineSpace, .lineSpace th, .lineSpace table, .lineSpace tr
+      {
+        max-width:2% !important;
+        width:2% !important;
+      }
+      th.line
+      {
+        max-width:100% !important;
+        width:100% !important;
+      }
+    }
+  }
+
+    table.footerNonFood.row
+    {
+      table-layout: fixed !important;
+      th.nonFoodSpace, .nonFoodSpace th, .nonFoodSpace table, .nonFoodSpace tr
+      {
+        max-width:10% !important;
+        width:10%  !important;
+      }
+      th.nonFoodTextArea
+      {
+        max-width:90% !important;
+        width:90% !important;
+        table-layout: fixed !important;
+        display:inline-block !important;
+        margin-left:10px !important;
+      }
+
+    }
+      
+    table.footerLinks.row
+    {
+      .footerLinksSpace
+      {
+        max-width:5%  !important;
+        width:5%  !important;
+      }
+    } 
+  }
+  .wideLogo
+  {
+    display:inline-block !important;
+  }
+
+  .innermostFooterLinks th.here a, .innermostFooterLinks th.here th
+  {
+    text-align:center !important;
+  }
+
+  .footerPolicy
+  {
+    .footerPolicySpace
+    {
+      width:5% !important;
+      max-width:5% !important;
+    }
+
+    .footerPolicyMain
+    {
+      width:90% !important;
+      max-width:90% !important;
+      #long
+      {
+        width:90%;
+      }
+    }
+  }
+  #nonFoodP
+  {
+    width:90% !important;
+  }
+}
+
+
+
+/* Desktop and Tablet */
+body,
+html, 
+.body {
+  background: #ffffff !important;
+}
+p, h1, h2, li, ul
+{
+  padding-left:0;
+  padding-right:0;
+  padding-top:0;
+  padding-bottom:0;
+  margin-left:0;
+  margin-right:0;
+  margin-top:0;
+  margin-bottom:0;
+  hyphens:none;
+  list-style-type: none;
+}
+
+.container.header {
+  background: #fedfdc;
+}
+
+.header
+{
+  h1
+  {
+    font-size: 51px;
+    font-weight:600;
+  }
+  a.button
+  {
+    background-color:#eb1700;
+    border:1px solid #eb1700;
+    border-radius:30px;
+    color:#ffffff;
+    font-weight:600;
+    font-size:18px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+  {
+    max-width:60px !important;
+  }
+  .headerMain
+  {
+    width:480px;
+    p
+    {
+      width:312px;
+      
+    }
+    img
+    {
+      width:45px;
+    }
+  }
+}
+
+.container.mainContent 
+{
+  background: #fedfdc;
+  background-color:#fedfdc;
+  .midContentContainer
+  {
+    background: #fedfdc;
+    background-color:#fedfdc;
+    .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+      {
+        max-width:42px !important;
+        width:42px;
+      }
+    .listContainter
+    {
+      width:616px;
+      border-radius:30px 30px 0 0;
+      background: #ffffff;
+      background-color: #ffffff;
+      .innermostContainer
+      {
+        width:536px;
+        font-family: 'TTNorms-Regular',Arial,sans-serif !important;
+        .price
+        {
+          width:53px;
+        }
+        .quantity
+        {
+          width:80px;
+        }
+        .items
+        {
+          width:402px;
+          p
+          {
+            width:352px;
+          }
+        }
+        th.totalPrice p#total
+        {
+          text-align:right;
+        }
+        p
+        {
+          font-size:17px;
+          font-family: 'TTNorms-Regular',Arial,sans-serif !important;
+          color:#767676;
+        }
+        .totalTop
+        {
+          color:black;
+        }
+        h2
+        {
+          font-weight:600;
+        }
+        .adressTop
+        {
+          font-size:14px;
+        }
+        .nameTop
+        {
+          font-size: 13px;
+          font-weight: 600;
+        }
+        .foodOrdered p
+        {
+          font-size:18px !important;
+        }
+        .calculations p
+        {
+          font-size:14px;
+        }
+        th.calculationNumbers p
+        {
+          text-align:right !important;
+        }
+        .finalTotal p
+        {
+          color:black !important;
+        }
+        .orderHelp
+        {
+          font-size:14px;
+          color:#ff2f07;
+        }
+      }
+      .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+      {
+        max-width:40px !important;
+        width:40px;
+      }
+    }
+  }
+  th.line
+  {
+    height:1px !important;
+    background: #b1b1b1;
+    background-color: #b1b1b1;
+    width:535px;
+  }
+  th.lineSpace, .lineSpace th, .lineSpace table, .lineSpace tr
+  {
+    width:5px;
+    max-width: 5px !important;
+  }
+}
+.footerNonFood
+{
+  th.nonFoodSpace, .nonFoodSpace th, .nonFoodSpace table, .nonFoodSpace tr
+  {
+    width:40px !important;
+    max-width:40px !important;
+  }
+  a.button
+  {
+    border-radius:30px;
+    background:#eb1700;
+    background-color: #eb1700;
+    color:#ffffff;
+    font-weight: 600;
+    font-size:18px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    
+  }
+}
+
+th.nonFoodTextArea
+{
+  width:330px;
+  h2
+  {
+    color:#d91400;
+    font-weight:600;
+    font-size:27px;
+  }
+  p
+  {
+    font-size:17px;
+  }
+  
+}
+table.footerLinks.row
+{
+  .innermostFooterLinks
+  {
+    width:516px;
+    max-width:516px;
+
+    img.wideLogo
+    {
+      width:214px;
+      max-width:214px;
+    }
+  }
+  .footerLinksSpace
+  {
+    width:42px;
+    max-width:42px;
+  }
+  .appRow table tbody tr th
+  {
+    text-align:center;
+  }
+  img.apple
+  {
+    width:23px;
+    max-width:23px;
+    display:inline-block;
+    padding-right:5px;
+  }
+  img.android
+  {
+    width:23px;
+    max-width:23px;
+    display:inline-block;
+    padding-left:5px;
+  }
+  .tiles table tbody tr th, .tilesText table tbody tr th p, .tiles
+  {
+    text-align: center;
+    color:#ffffff;
+  }
+  .tilesText table tbody tr th p, .tilesText table tbody tr th a
+  {
+    display:inline;
+  }
+  img.refer
+  {
+    width:34px;
+    max-width:34px;
+    display:inline-block;
+  }
+  img.job
+  {
+    width:28px;
+    max-width:28px;
+    display:inline-block;
+  }
+  img.pass
+  {
+    width:36px;
+    max-width:36px;
+    display:inline-block;
+  }
+  th.line
+  {
+    height:1px !important;
+    background: #ffffff;
+    background-color: #ffffff;
+    width:480px;
+  }
+}
+
+
+.footerPolicy
+{
+  .footerPolicySpace
+  {
+    width:42px;
+    max-width:42px;
+  }
+
+  .footerPolicyMain
+  {
+    width:516px;
+    max-width:516px;
+    font-size:14px;
+    p, a
+    {
+      color:#ababab;
+      font-size:14px;
+    }
+    a.warning
+    {
+      color:#939393;
+      text-decoration: underline;
+      font-size:14px;
+    }
+    .address
+    {
+      display:inline-block;
+    }
+    .footerPolicyIcons img
+    {
+      width:20px;
+      max-width:20px;
+      display:inline-block;
+    }
+    .footerPolicyIcons
+    {
+      .footerIconFacebook
+      {
+        width:13px;
+        max-width:13px;
+        padding-right:10px;
+      }
+      .footerIconTwitter
+      {
+        width:15px;
+        max-width:15px;
+        padding-right:10px;
+      }
+      .footerIconsInstagram
+      {
+        width:17px;
+        max-width:17px;
+        padding-right:10px;
+      }
+      .footerIconsM
+      {
+        width:20px;
+        max-width:20px;
+      }
+    }
+  }
+}
+.row.footerNonFood {
+  background: #f9f0e7;
+}
+
+.row.footerLinks
+{
+  background: #004a4f;
+}
+.row.footerPolicy
+{
+  background: #f4f4f4;
+}

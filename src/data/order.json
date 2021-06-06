@@ -1,0 +1,68 @@
+{
+    "name": "Jack",
+    "fullName":"Jack Guillory",
+    "paymentType":"Visa Ending in 1337",
+    "resturant":"McDonald's",
+    "total":"18.28",
+    "address":"404 Nowhere Dr, New Iberia, LA 70560, USA",
+    "subtotal":"13.35",
+    "taxes":"1.26",
+    "deliveryFee":"0.00",
+    "serviceFee":"0.67",
+    "tip":"3.00",
+    "ordered":
+    [
+        {
+            "quantity": "1",
+            "item": "Bacon Egg Cheese McGriddle Meal",
+            "itemType": "(Combo Meals)",
+            "price": "2.59",
+            "extras": 
+                [
+                    {
+                        "extra":"Large Minute Maid® Orange Juice (280 Cal.)"
+                    }
+                ]
+        },
+        {
+            "quantity": "1",
+            "item": "Big Breakfast with Muffin and Hotcake",
+            "itemType": "(Homestyle Breakfasts)",
+            "price": "6.38",
+            "extras": 
+                [
+                    {
+                        "extra":"Extra Scrambled Eggs (140 Cal.)"
+                    },
+                    {
+                        "extra":"Extra Sausage (190 Cal.)"
+                    }
+                ]
+        },
+        {
+            "quantity": "1",
+            "item": "Sausage Egg Cheese McGriddle Meal",
+            "itemType": "(Combo Meals)",
+            "price": "1.79",
+            "extras": 
+                [
+                    {
+                        "extra":"Large Premium Roast Coffee (0 Cal.)"
+                    }
+                ]
+        },
+        {
+            "quantity": "1",
+            "item": "Sausage Egg Cheese McGriddle Meal",
+            "itemType": "(Combo Meals)",
+            "price": "2.59",
+            "extras": 
+                [
+                    {
+                        "extra":"Large Minute Maid® Orange Juice (280 Cal.)"
+                    }
+                ]
+        }
+        
+    ]
+}
