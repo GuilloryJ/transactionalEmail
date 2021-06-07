@@ -1,14 +1,14 @@
 ---
 layout: index-layout
-subject: My Email Templates
+subject: Transactional Email
 name: Jack
 time: 10:42 AM - 10:52 AM
 total: $18.28
 ---
 
 <container class="header">
-  <spacer size="62" class="show-for-large"></spacer>
-  <spacer size="42" class="hide-for-large"></spacer>
+  <p class="show-for-large"><br><br><br><br></p>
+  <p class="hide-for-large"><br><br><br></p>
   <row>
     <columns class="sideSpace" width="60px" small="1" id="space"></columns>
     <columns class="headerMain" small="10">
@@ -29,7 +29,7 @@ total: $18.28
     <columns class="sideSpace" small="1"></columns>
   </row>
 
-  <spacer></spacer>
+
 
   <!-- Header image -->
   <row>
@@ -52,13 +52,13 @@ total: $18.28
           <spacer size="50"></spacer>
           <p>Paid with {{order.paymentType}}</p>
           <p>{{order.resturant}}</p>
-          <p class="totalTop"><b>Total: ${{order.total}}</b></p>
+          <p class="totalTop"><b>Total: ${{#mathOperator}}{{order.tip}},{{order.taxes}},{{order.subtotal}},{{order.deliveryFee}},{{order.serviceFee}}{{/mathOperator}}</b></p>
           <spacer size="35"></spacer>
           <h2>Your receipt</h2>
           <p class="adressTop">{{order.address}}</p>
           <spacer size="45"></spacer>
-          <p class="nameTop">- For: {{order.fullName}} -</p>
-          <spacer size="20"></spacer>
+          <p class="nameTop">- For: {{order.fullName}} -<br><br></p>
+
           <!-- for each item ordered -->
           {{#each order.ordered}}
           <row class="foodOrdered">
@@ -73,22 +73,25 @@ total: $18.28
                 <li><p>&#9679; {{this.extra}}</p></li>
                 {{/each}}
               </ul>
+              <p><br></p>
             </columns>
             <columns class="price" small="2">
               <p>${{this.price}}</p>
             </columns>
           </row>
-          <spacer size="20"></spacer>
+
           {{/each}}
 
           <spacer size="25"></spacer>
 
-          <row>
-            <columns class="lineSpace show-for-large" small="1"></columns>
-            <columns class="line" width="535px" small="10"></columns>
-            <columns class="lineSpace show-for-large" small="1"></columns>
-          </row>
-          <spacer size="10"></spacer>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="text-align: center;">
+                <img src="https://jackisbuilding.com/images/transactionalEmail/unnamed.gif" alt="line" class="myLine marginB10" height="1px">
+              </td>
+            </tr>
+          </table>
+
 
           <!-- Calculations for total -->
           <row class="calculations">
@@ -97,26 +100,26 @@ total: $18.28
               <p>Taxes</p>
               <p>Delivery Fee</p>
               <p>Service Fee</p>
-              <p>Tip</p>
+              <p class="marginB10">Tip</p>
             </columns>
             <columns class="calculationNumbers" small="6">
               <p>${{order.subtotal}}</p>
               <p>${{order.taxes}}</p>
               <p>${{order.deliveryFee}}</p>
               <p>${{order.serviceFee}}</p>
-              <p>${{order.tip}}</p>
+              <p class="marginB10">${{order.tip}}</p>
             </columns>
           </row>
+          
+          
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="text-align: center;">
+                <img src="https://jackisbuilding.com/images/transactionalEmail/unnamed.gif" alt="line" class="myLine marginB10" height="1px">
+              </td>
+            </tr>
+          </table>
 
-          <spacer size="10"></spacer>
-
-          <row>
-            <columns class="lineSpace show-for-large"></columns>
-            <columns class="line"></columns>
-            <columns class="lineSpace show-for-large"></columns>
-          </row>
-
-          <spacer size="10"></spacer>
 
           <row class="finalTotal">
             <columns small="6">
@@ -158,14 +161,12 @@ total: $18.28
         <columns class="nonFoodSpace" width="40px" large="1" small="2"></columns>
         <columns class="nonFoodTextArea" width="330px" large="11" small="10">
           <spacer size="30"></spacer>
-          <a href="#">
-            <h2>Get more from your<br>neighborhood.</h2>
-            <spacer size="10"></spacer>
+          <a href="#" class="marginB20">
+            <h2 class="marginB10">Get more from your<br>neighborhood.</h2>
             <p id="nonFoodP">Snacks, drinks, medicine, and more - from your corner store or drugstore to your door, delivered in under 30 minutes.</p>
             <spacer size="25"></spacer>
             <a href="#" class="button">Shop Now</a>
           </a>
-          <spacer size="20"></spacer>
         </columns>
       </row>
     </columns>
@@ -185,11 +186,10 @@ total: $18.28
           <spacer size="45"></spacer>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/footerLogo.png" alt="DoorDash Logo." class="wideLogo"></a>
           <spacer size="25"></spacer>
+          <img src="https://jackisbuilding.com/images/transactionalEmail/unnamed.gif" alt="line" class="myLine" height="1px">
         </columns>
       </row>
-      <row>
-        <columns class="line"></columns>
-      </row>
+
 
       <row>
         <!-- App -->
@@ -197,11 +197,10 @@ total: $18.28
           <spacer size="35"></spacer>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/apple.png" alt="apple Logo." class="apple"></a>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/android.png" alt="android Logo." class="android"></a>
-          <spacer size="9"></spacer>
           <row>
             <columns class="tilesText">
               <a href="#"><p>Download<br>the App</p></a>
-            </columns>
+            </columns> 
           </row>
         </columns>
 
@@ -209,7 +208,6 @@ total: $18.28
         <columns class="tiles" small="6" large="3">
           <spacer size="35"></spacer>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/dashPassIcon.jpg" alt="Dash pass logo." class="pass"></a>
-          <spacer size="9"></spacer>
           <row>
             <columns class="tilesText">
               <a href="#"><p>Sign up for DashPass</p></a>
@@ -221,7 +219,6 @@ total: $18.28
         <columns class="tiles" small="6" large="3">
           <spacer size="35"></spacer>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/referIcon.png" alt="Referal icon." class="refer"></a>
-          <spacer size="9"></spacer>
           <row>
             <columns class="tilesText">
               <a href="#"><p>Refer and<br>earn credit</p></a>
@@ -233,7 +230,6 @@ total: $18.28
         <columns class="tiles" small="6" large="3">
           <spacer size="35"></spacer>
           <a href="#"><img src="https://jackisbuilding.com/images/transactionalEmail/deliverIcon.png" alt="Driver icon." class="job"></a>
-          <spacer size="9"></spacer>
           <row>
             <columns class="tilesText">
               <a href="#"><p>Deliver with DoorDash</p></a>
@@ -250,9 +246,21 @@ total: $18.28
   <row class="footerPolicy">
     <columns class="footerPolicySpace"></columns>
     <columns class="footerPolicyMain">
-      <spacer size="40"></spacer>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td style="text-align: center;">
+            <img src="https://jackisbuilding.com/images/transactionalEmail/unnamed.gif" alt="space" class="lockHeight40" height="40px">
+          </td>
+        </tr>
+      </table>
       <a href="#"><p class="address">©2021 DoorDash, Inc.<br>303 2nd St.<br>South Tower, Suite 800<br>San Francisco CA 94107</p#></a>
-      <spacer size="18"></spacer>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td style="text-align: center;">
+              <img src="https://jackisbuilding.com/images/transactionalEmail/unnamed.gif" alt="space" class="lockHeight18" height="18px">
+            </td>
+          </tr>
+        </table>
       <row>
         <columns class="footerPolicyIcons">
           <a href="https://www.facebook.com/"><img src="https://jackisbuilding.com/images/transactionalEmail/facebook.png" alt="facebook icon." class="footerIconFacebook"></a>
@@ -267,10 +275,8 @@ total: $18.28
       <p>Prop 65 Restaurant <a href="#" class="warning">WARNING</a></p>
       <spacer size="18"></spacer>
       <p>Prop 65 Alcohol <a href="#" class="warning">WARNING</a></p>
-      <p id="long">Drinking distilled spirits, beer, coolers, wine, and other alcoholic beverages may increase cancer risk, and, during pregnancy, can cause birth defects.  For more information go to www.P65Warnings.ca.gov/alcohol.</p>
-      <spacer size="18"></spacer>
-      <p>Prop 65 BPA <a href="#" class="warning">WARNING</a></p>
-      <spacer size="30"></spacer>
+      <p id="long">Drinking distilled spirits, beer, coolers, wine, and other alcoholic beverages may increase cancer risk, and, during pregnancy, can cause birth defects.  For more information go to www.P65Warnings.ca.gov/alcohol.<br><br></p>
+      <p>Prop 65 BPA <a href="#" class="warning">WARNING</a><br><br><br><br></p>
     </columns>
     <columns class="footerPolicySpace"></columns>
   </row>

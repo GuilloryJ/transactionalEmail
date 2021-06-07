@@ -1,13 +1,14 @@
 /* Mobile */
 @media only screen and (max-width: 600px)
 {
+  
  .header.container
  {
    h1
    {
      font-size:40px !important;
    }
-  .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr, #space td
+  .sideSpace
   {
     max-width:20px !important;
     width:20px !important;
@@ -18,7 +19,7 @@
   .midContentContainer
   {
     table-layout: fixed;
-    .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+    .sideSpace
     {
       max-width:5% !important;
       width:5% !important;
@@ -28,12 +29,11 @@
     {
       table-layout: fixed !important;
       width:90% !important;
-      color:black !important;
       p
       {
         color:black !important;
       }
-      .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+      .sideSpace
       {
         max-width:5% !important;
         width:5% !important;
@@ -78,23 +78,14 @@
           }
         }
       }
-      th.lineSpace, .lineSpace th, .lineSpace table, .lineSpace tr
-      {
-        max-width:2% !important;
-        width:2% !important;
-      }
-      th.line
-      {
-        max-width:100% !important;
-        width:100% !important;
-      }
+
     }
   }
 
     table.footerNonFood.row
     {
       table-layout: fixed !important;
-      th.nonFoodSpace, .nonFoodSpace th, .nonFoodSpace table, .nonFoodSpace tr
+      th.nonFoodSpace
       {
         max-width:10% !important;
         width:10%  !important;
@@ -151,6 +142,10 @@
   {
     width:90% !important;
   }
+  .myLine
+  {
+    height:1px !important;
+  }
 }
 
 
@@ -199,7 +194,7 @@ p, h1, h2, li, ul
     padding-top:10px;
     padding-bottom:10px;
   }
-  .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+  .sideSpace
   {
     max-width:60px !important;
   }
@@ -226,7 +221,7 @@ p, h1, h2, li, ul
   {
     background: #fedfdc;
     background-color:#fedfdc;
-    .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+    .sideSpace, .sideSpace table
       {
         max-width:42px !important;
         width:42px;
@@ -306,29 +301,18 @@ p, h1, h2, li, ul
           color:#ff2f07;
         }
       }
-      .sideSpace, .sideSpace th, .sideSpace table, .sideSpace tr
+      .sideSpace
       {
         max-width:40px !important;
         width:40px;
       }
     }
   }
-  th.line
-  {
-    height:1px !important;
-    background: #b1b1b1;
-    background-color: #b1b1b1;
-    width:535px;
-  }
-  th.lineSpace, .lineSpace th, .lineSpace table, .lineSpace tr
-  {
-    width:5px;
-    max-width: 5px !important;
-  }
+
 }
 .footerNonFood
 {
-  th.nonFoodSpace, .nonFoodSpace th, .nonFoodSpace table, .nonFoodSpace tr
+  th.nonFoodSpace, .nonFoodSpace table
   {
     width:40px !important;
     max-width:40px !important;
@@ -392,6 +376,7 @@ table.footerLinks.row
     max-width:23px;
     display:inline-block;
     padding-right:5px;
+    margin-bottom:9px !important;
   }
   img.android
   {
@@ -399,8 +384,9 @@ table.footerLinks.row
     max-width:23px;
     display:inline-block;
     padding-left:5px;
+    margin-bottom:9px !important;
   }
-  .tiles table tbody tr th, .tilesText table tbody tr th p, .tiles
+  .tiles table tbody tr th, .tilesText table tbody tr th p
   {
     text-align: center;
     color:#ffffff;
@@ -414,26 +400,23 @@ table.footerLinks.row
     width:34px;
     max-width:34px;
     display:inline-block;
+    margin-bottom:9px !important;
   }
   img.job
   {
     width:28px;
     max-width:28px;
     display:inline-block;
+    margin-bottom:9px !important;
   }
   img.pass
   {
     width:36px;
     max-width:36px;
     display:inline-block;
+    margin-bottom:9px !important;
   }
-  th.line
-  {
-    height:1px !important;
-    background: #ffffff;
-    background-color: #ffffff;
-    width:480px;
-  }
+ 
 }
 
 
@@ -511,3 +494,64 @@ table.footerLinks.row
 {
   background: #f4f4f4;
 }
+
+.myLine
+{
+  max-width:98% !important;
+  width:98% !important;
+  background-color:#b1b1b1;
+  background:#b1b1b1;
+  display:inline-block !important;
+}
+.here th
+{
+  text-align: center !important;
+  .myLine
+  {
+    background-color:#ffffff;
+    background:#ffffff;
+  }
+}
+
+.marginB10
+{
+  margin-bottom:10px;
+}
+.marginB15
+{
+  margin-bottom:15px;
+}
+.marginB18
+{
+  margin-bottom:18px !important;
+}
+.marginB20
+{
+  margin-bottom:20px !important;
+}
+.marginB25
+{
+  margin-bottom:25px !important;
+}
+.marginB30
+{
+  margin-bottom:30px;
+}
+.marginB45
+{
+  margin-bottom:45px;
+}
+
+.marginT30
+{
+  margin-top:30px !important;
+}
+
+.lockHeight40
+  {
+    height:40px !important;
+  }
+  .lockHeight18
+  {
+    height:18px !important;
+  }
